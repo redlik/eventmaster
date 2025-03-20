@@ -7,18 +7,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="mx-auto">
+<body class="mx-auto" x-data="{slideMenu: false }">
+  <div id="slide-menu" x-show="slideMenu" class="absolute top right w-1/3 h-full bg-white">
+    <div>
+      Navigation
+    </div>
+  </div>
   <header class="bg-bcipink text-white py-8">
     <div class="flex justify-between items-center px-12">
-      <div class="">
-        <svg width="76" height="27" viewBox="0 0 76 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line y1="1.76611" x2="62.189" y2="1.76611" stroke="white" stroke-width="3"/>
-          <line y1="13.5" x2="62.189" y2="13.5" stroke="white" stroke-width="3"/>
-          <line y1="25.2338" x2="62.189" y2="25.2338" stroke="white" stroke-width="3"/>
-        </svg>
+      <div id="menu-burger">
+        <a href="#" @click="slideMenu = !slideMenu">
+          <svg width="76" height="27" viewBox="0 0 76 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="1.76611" x2="62.189" y2="1.76611" stroke="white" stroke-width="3"/>
+            <line y1="13.5" x2="62.189" y2="13.5" stroke="white" stroke-width="3"/>
+            <line y1="25.2338" x2="62.189" y2="25.2338" stroke="white" stroke-width="3"/>
+          </svg>
+        </a>
       </div>
-      <div class="">
+      <div>
         <svg width="116" height="90" viewBox="0 0 116 90" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_10_7806)">
             <path d="M74.7321 5.52802C72.945 4.49115 70.9462 3.88681 68.8886 3.76238C66.6488 3.86311 64.4619 4.48523 62.4984 5.58134L62.3926 3.46614L63.0804 1.87233C64.7029 0.72881 66.6253 0.0889148 68.6064 0.0237403C70.8227 -0.159933 73.0155 0.598461 74.6498 2.10932L75.0202 4.03493L74.7263 5.52209L74.7321 5.52802Z" fill="#FEFEFE"/>
@@ -65,13 +73,18 @@
             </clipPath>
           </defs>
         </svg>
-
       </div>
-      <div class="flex items-center">
-        <button class="bg-buttongreen px-6 py-2 rounded-lg uppercase font-bold">Sign in</button>
+      <div>
+        <button class="green-button">Sign in</button>
       </div>
     </div>
-
   </header>
+  <section id="hero-section" class="flex items-center justify-center">
+    <div class="max-w-2xl mx-auto text-center">
+      <h1 class="text-6xl font-bold uppercase text-white">50k in may</h1>
+      <h4 class="text-white text-lg white mt-4">Aute do consectetur et ipsum commodo laboris labore reprehenderit. nsequat consectetur pariatur id minim elit.</h4>
+      <button class="green-button mt-4">Register Now</button>
+    </div>
+  </section>
 </body>
 </html>

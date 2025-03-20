@@ -8,3 +8,16 @@
 body {
     font-family: "Montserrat", sans-serif;
 }
+
+#hero-section {
+    background: url("../img/header-bg.png") rgba(213, 27, 93, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    min-height: 600px;
+}
+
+.green-button {
+    @apply bg-buttongreen px-6 py-2 rounded-lg uppercase font-bold text-white;
+}
