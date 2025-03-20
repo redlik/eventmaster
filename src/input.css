@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-bcipink: #D51B5D;
+    --color-buttongreen: #21A71D;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
