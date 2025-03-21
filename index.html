@@ -10,10 +10,25 @@
           rel="stylesheet">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="mx-auto" x-data="{slideMenu: false }">
-<div id="slide-menu" x-show="slideMenu" class="absolute top right w-1/3 h-full bg-white">
+<body class="mx-auto" x-data="{slideMenu: false }" x-on:keydown.escape="slideMenu = false">
+<div id="slide-menu" x-show="slideMenu" x-transition @click.outside="slideMenu = false"
+     class="absolute top right w-full lg:w-1/3 h-full bg-white shadow-md p-12">
+    <div class="flex justify-between items-center">
+        <div class="font-bold text-xl mb-12">
+            Menu
+        </div>
+        <div>
+            <a href="#" @click="slideMenu = !slideMenu">X</a>
+        </div>
+    </div>
     <div>
-        Navigation
+        <ul class="flex flex-col justify-between gap-8 text-xl font-light">
+            <li>Home</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
     </div>
 </div>
 <header class="bg-bcipink text-white py-8">
