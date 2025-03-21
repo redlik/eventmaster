@@ -12,8 +12,8 @@
 </head>
 <body class="mx-auto" x-data="{slideMenu: false }" x-on:keydown.escape="slideMenu = false">
 <div id="slide-menu" x-show="slideMenu" x-transition @click.outside="slideMenu = false"
-     class="absolute top right w-full lg:w-1/3 h-full bg-white shadow-md p-12">
-    <div class="flex justify-between items-center  mb-12">
+     class="absolute top right w-full lg:w-1/3 h-full bg-white shadow-md p-12 z-50 overflow-hidden">
+    <div class="flex justify-between items-center mb-12">
         <div class="font-bold text-xl">
             Menu
         </div>
@@ -31,11 +31,11 @@
         </ul>
     </div>
 </div>
-<header class="bg-bcipink text-white py-4 lg:py-6">
+<header class="bg-bcipink text-white py-4 lg:py-3">
     <div class="flex justify-between items-center px-12">
         <div id="menu-burger">
             <a href="#" @click="slideMenu = !slideMenu">
-                <svg class="w-12 lg:w-20" width="100%" viewBox="0 0 76 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-12 lg:w-12" width="100%" viewBox="0 0 76 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="1.76611" x2="62.189" y2="1.76611" stroke="white" stroke-width="3"/>
                     <line y1="13.5" x2="62.189" y2="13.5" stroke="white" stroke-width="3"/>
                     <line y1="25.2338" x2="62.189" y2="25.2338" stroke="white" stroke-width="3"/>
@@ -43,7 +43,7 @@
             </a>
         </div>
         <div>
-            <svg class="w-16 h-16 lg:w-32 lg:h-32" width="100%" height="auto" viewBox="0 0 116 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-16 h-16 lg:w-20 lg:h-20" width="100%" height="auto" viewBox="0 0 116 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_10_7806)">
                     <path d="M74.7321 5.52802C72.945 4.49115 70.9462 3.88681 68.8886 3.76238C66.6488 3.86311 64.4619 4.48523 62.4984 5.58134L62.3926 3.46614L63.0804 1.87233C64.7029 0.72881 66.6253 0.0889148 68.6064 0.0237403C70.8227 -0.159933 73.0155 0.598461 74.6498 2.10932L75.0202 4.03493L74.7263 5.52209L74.7321 5.52802Z"
                           fill="#FEFEFE"/>
@@ -137,6 +137,12 @@
             nsequat consectetur pariatur id minim elit.</h4>
         <button class="green-button mt-4">Register Now</button>
     </div>
+    <div class="wave-shape wave-shape-bottom" data-negative="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="wave-shape-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+  c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+  c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+        </svg>    </div>
 </section>
 <section id="#content" class="min-h-96 bg-gray-200 flex flex-col items-center justify-center">
     Content goes here
