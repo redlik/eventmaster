@@ -20,7 +20,11 @@ body {
 }
 
 .green-button {
-    @apply bg-buttongreen px-6 py-2 rounded-lg uppercase font-bold text-white;
+    @apply bg-buttongreen px-6 py-2 rounded-lg uppercase font-bold text-white cursor-pointer;
+}
+
+.green-button:hover {
+    @apply bg-green-700;
 }
 
 .wave-shape[data-negative=false].wave-shape-bottom {
