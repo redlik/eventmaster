@@ -27,6 +27,14 @@ body {
     @apply bg-green-700;
 }
 
+.pink-button {
+    @apply bg-bcipink px-8 py-4 my-8 rounded-lg text-white text-lg cursor-pointer;
+}
+
+.pink-button:hover {
+    @apply bg-pink-700;
+}
+
 .wave-shape[data-negative=false].wave-shape-bottom {
     transform: rotate(180deg);
 }
@@ -49,7 +57,7 @@ body {
 }
 
 .wave-shape .wave-shape-fill {
-    fill: oklch(0.928 0.006 264.531);
+    fill: #fff;
     transform-origin: center;
     transform: rotateY(0deg);
 }
