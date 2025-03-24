@@ -62,6 +62,12 @@ body {
     transform: rotateY(0deg);
 }
 
+.wave-border {
+    background: url("../img/bg-wave.svg") center top no-repeat;
+    background-size: cover;
+    min-height: 60px;
+}
+
 #why-video {
     background: url("../img/why-bg.png") no-repeat center center;
     background-size: cover;
