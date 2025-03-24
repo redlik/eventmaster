@@ -74,10 +74,12 @@ body {
 }
 
 #leadersboard {
+}
+
+.inner-leaderboard {
     @apply py-12;
     background: url("../img/leaderboards-bg.png") no-repeat center center #D51B5D;
     background-size: cover;
-
 }
 
 #faq  {

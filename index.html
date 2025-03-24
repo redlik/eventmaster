@@ -151,11 +151,11 @@
     <div class="w-full md:w-1/2 my-6 md:my-0">
         <h2 class="font-bold text-bcipink text-6xl">Get the t-shirt</h2>
         <h5 class="my-8 text-xl text-gray-600">50K in May. Help Cure Breast Cancer.</h5>
-        <a href="#" class="pink-button">Register Now</a>
+        <a href="#" class="pink-button sticky bottom-0">Register Now</a>
     </div>
     <div class="w-full md:w-1/2 relative">
         <img src="img/t-shirt.jpg" alt="" class="">
-        <div id="ribbon-t-shirt" class="lg:top-60 lg:-left-[100px] lg:absolute h-64 lg:h-[300px] -rotate-30 w-52">
+        <div id="ribbon-t-shirt" class="hidden lg:block lg:top-60 lg:-left-[100px] lg:absolute h-64 lg:h-[300px] -rotate-30 w-52">
             <div>
                 <svg width="100%" height="100%" viewBox="0 0 252 305" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M199.633 82.2703C197.254 80.0577 175.35 61.2333 146.976 54.8868C118.602 48.5404 82.864 60.5912 82.864 60.5912L85.5954 40.3031L95.1167 26.5004C95.1167 26.5004 121.688 13.4861 151.128 19.0829C180.568 24.6796 197.559 37.9238 204.522 49.7233L204.591 68.6391L199.61 82.2372L199.633 82.2703Z"
@@ -303,68 +303,12 @@
     </div>
 </section>
 <section id="leadersboard">
-    <div class="max-w-7xl flex flex-col mx-auto items-center gap-4">
-        <h3 class="uppercase text-4xl font-bold text-white">Leaderboards</h3>
-        <h4 class="font-bold text-white text-2xl">Top fundraisers</h4>
-        <div class="w-2/3 mx-auto">
-            <p class="text-white text-center">
-                Aute do consectetur et ipsum commodo laboris labore reprehenderit. Ad ullamco do excepteur consequat
-                consectetur pariatur id minim elit. Lorem.
-            </p>
-        </div>
-        <div class="donation-list">
-            <div class="donation-box">
-                <div class="flex flex-row items-center gap-2">
-                    <img src="img/male-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
-                    <div class="font-bold text-gray-500 text-xl">John Smith</div>
-                </div>
-                <div class="flex flex-col items-start">
-                    <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
-                    <h6 class="uppercase text-gray-500">Raised</h6>
-                </div>
-            </div>
-            <div class="donation-box">
-                <div class="flex flex-row items-center gap-2">
-                    <img src="img/female-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
-                    <div class="font-bold text-gray-500 text-xl">Jane Doe</div>
-                </div>
-                <div class="flex flex-col items-start">
-                    <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
-                    <h6 class="uppercase text-gray-500">Raised</h6>
-                </div>
-            </div>
-            <div class="donation-box">
-                <div class="flex flex-row items-center gap-2">
-                    <img src="img/male-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
-                    <div class="font-bold text-gray-500 text-xl">John Smith</div>
-                </div>
-                <div class="flex flex-col items-start">
-                    <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
-                    <h6 class="uppercase text-gray-500">Raised</h6>
-                </div>
-            </div>
-            <div class="donation-box">
-                <div class="flex flex-row items-center gap-2">
-                    <img src="img/female-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
-                    <div class="font-bold text-gray-500 text-xl">Jane Doe</div>
-                </div>
-                <div class="flex flex-col items-start">
-                    <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
-                    <h6 class="uppercase text-gray-500">Raised</h6>
-                </div>
-            </div>
-            <div class="donation-box">
-                <div class="flex flex-row items-center gap-2">
-                    <img src="img/male-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
-                    <div class="font-bold text-gray-500 text-xl">John Smith</div>
-                </div>
-                <div class="flex flex-col items-start">
-                    <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
-                    <h6 class="uppercase text-gray-500">Raised</h6>
-                </div>
-            </div>
-        </div>
-        <div id="team-donations" class="flex flex-col gap-4 items-center mt-12">
+    <div class="wave-border -mb-1 w-full">
+        <!-- Wave shape goes here-->
+    </div>
+    <div class="inner-leaderboard">
+        <div class="max-w-7xl flex flex-col mx-auto items-center gap-4">
+            <h3 class="uppercase text-4xl font-bold text-white">Leaderboards</h3>
             <h4 class="font-bold text-white text-2xl">Top fundraisers</h4>
             <div class="w-2/3 mx-auto">
                 <p class="text-white text-center">
@@ -424,7 +368,72 @@
                     </div>
                 </div>
             </div>
+            <div id="team-donations" class="flex flex-col gap-4 items-center mt-12">
+                <h4 class="font-bold text-white text-2xl">Top fundraisers</h4>
+                <div class="w-2/3 mx-auto">
+                    <p class="text-white text-center">
+                        Aute do consectetur et ipsum commodo laboris labore reprehenderit. Ad ullamco do excepteur
+                        consequat
+                        consectetur pariatur id minim elit. Lorem.
+                    </p>
+                </div>
+                <div class="donation-list">
+                    <div class="donation-box">
+                        <div class="flex flex-row items-center gap-2">
+                            <img src="img/male-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
+                            <div class="font-bold text-gray-500 text-xl">John Smith</div>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
+                            <h6 class="uppercase text-gray-500">Raised</h6>
+                        </div>
+                    </div>
+                    <div class="donation-box">
+                        <div class="flex flex-row items-center gap-2">
+                            <img src="img/female-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
+                            <div class="font-bold text-gray-500 text-xl">Jane Doe</div>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
+                            <h6 class="uppercase text-gray-500">Raised</h6>
+                        </div>
+                    </div>
+                    <div class="donation-box">
+                        <div class="flex flex-row items-center gap-2">
+                            <img src="img/male-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
+                            <div class="font-bold text-gray-500 text-xl">John Smith</div>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
+                            <h6 class="uppercase text-gray-500">Raised</h6>
+                        </div>
+                    </div>
+                    <div class="donation-box">
+                        <div class="flex flex-row items-center gap-2">
+                            <img src="img/female-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
+                            <div class="font-bold text-gray-500 text-xl">Jane Doe</div>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
+                            <h6 class="uppercase text-gray-500">Raised</h6>
+                        </div>
+                    </div>
+                    <div class="donation-box">
+                        <div class="flex flex-row items-center gap-2">
+                            <img src="img/male-photo.jpg" alt="" class="rounded-full w-16 h-16 object-contain">
+                            <div class="font-bold text-gray-500 text-xl">John Smith</div>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <h4 class="text-bcipink font-bold text-2xl">€3,560</h4>
+                            <h6 class="uppercase text-gray-500">Raised</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="wave-border rotate-180 -mt-1 w-full">
+        <!-- Wave shape goes here-->
     </div>
 </section>
 <section id="faq">
