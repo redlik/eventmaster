@@ -173,8 +173,8 @@
 <section id="numbers" class="bg-bcipink py-12 my-8">
     <div class="flex flex-row max-w-7xl mx-auto gap-4">
         <div class="flex flex-col gap-8">
-            <div class="flex flex-row gap-8">
-                <div id="funds" class="flex flex-col gap-4 justify-center w-3/4">
+            <div class="md:flex md:flex-row gap-8 px-4 md:px-0">
+                <div id="funds" class="flex flex-col gap-4 justify-center w-full md:w-3/4">
                     <div class="flex flex-row justify-between py-2">
                         <div class="">
                             <h4 class="text-white font-bold text-4xl mb-4">€122,000</h4>
@@ -194,12 +194,12 @@
                         </svg>
                     </div>
                 </div>
-                <div class="w-1/4 flex flex-col items-center justify-center bg-white/20 rounded-xl p-12">
+                <div class="w-1/2 md:w-1/4 mx-auto flex flex-col items-center justify-center bg-white/20 rounded-xl p-8 md:p-12 mt-6 md:mt-0">
                     <h4 class="text-white font-bold text-4xl">3,100</h4>
                     <h6 class="text-white font-bold">People joined</h6>
                 </div>
             </div>
-            <div id="distance" class="flex flex-col gap-4 justify-center">
+            <div id="distance" class="flex flex-col gap-4 justify-center px-6 md:px-0">
                 <div>
                     <h4 class="text-white font-bold text-2xl text-center">3200km Distance Travelled</h4>
                 </div>
@@ -219,27 +219,27 @@
 
     </div>
 </section>
-<section id="donations-slider my-8 py-8">
-    <div class="flex flex-row gap-8">
-        <div class="donation-slider">
+<section id="donations-slider" class="py-8">
+    <div class="flex flex-row gap-8 px-4 md:px-0 overflow-x-scroll">
+        <div class="donation-slide">
             <img src="img/ribbon.svg" alt="">
             <div class="text-gray-600 font-semibold">
                 Jane Smith just donated <span>€200.00</span>
             </div>
         </div>
-        <div class="donation-slider">
+        <div class="donation-slide">
             <img src="img/ribbon.svg" alt="">
             <div class="text-gray-600 font-semibold">
                 Jane Smith just donated <span>€200.00</span>
             </div>
         </div>
-        <div class="donation-slider">
+        <div class="donation-slide">
             <img src="img/ribbon.svg" alt="">
             <div class="text-gray-600 font-semibold">
                 Jane Smith just donated <span>€200.00</span>
             </div>
         </div>
-        <div class="donation-slider">
+        <div class="donation-slide">
             <img src="img/ribbon.svg" alt="">
             <div class="text-gray-600 font-semibold">
                 Jane Smith just donated <span>€200.00</span>
@@ -258,14 +258,14 @@
             life-changing impacts like ground-breaking new trials, more and better drugs, terrific new treatments, less
             invasive surgeries and more lives saved.
         </p>
-        <div id="video-box" class="relative">
+        <div id="video-box" class="relative px-4 md:px-0">
             <img src="img/video-preview.png" alt="">
             <div id="playback-overlay" class="absolute inset-0 flex items-center justify-center">
                 <a href="#" id="playback-button"><img src="img/playback.png" alt=""></a>
             </div>
         </div>
     </div>
-    <div class="flex flex-row max-w-6xl mx-auto gap-4 my-12">
+    <div class="md:flex md:flex-row max-w-6xl mx-auto gap-4 my-12">
         <div class="image-box">
             <div class="w-28 h-28 bg-bcipink rounded-full flex items-center justify-center mb-4">
                 <img src="img/icon-registration.svg" alt="" class="">
@@ -418,7 +418,7 @@
     </div>
 </section>
 <section id="faq">
-    <div class="flex flex-col gap-4 items-center max-w-4xl mx-auto py-12">
+    <div class="flex flex-col gap-4 items-center max-w-4xl mx-auto py-12 px-4 md:px-0">
         <h4 class="text-4xl text-bcipink font-bold">Frequently Asked Questions</h4>
         <p class="text-center text-gray-600">
             Deserunt proident eu nostrud voluptate. Est ex ea tempor irure aliquip et. Pariatur deserunt sunt labore
@@ -430,11 +430,8 @@
                     <div>
                         How do I sign up?
                     </div>
-                    <button class="cursor-pointer" @click="faq = !faq, show = 1" x-show="!faq">
+                    <button class="cursor-pointer" @click="show = 1" :class="show === 1 ? 'rotate-180' : 'rotate-0'">
                         <img src="img/arrow-down.svg" class="w-8 h-8" alt="">
-                    </button>
-                    <button class="cursor-pointer" @click="faq = !faq" x-show="faq">
-                        <img src="img/arrow-up.svg" class="w-8 h-8" alt="">
                     </button>
                 </div>
                 <div class="faq-body" x-show="show === 1">
@@ -451,11 +448,8 @@
                     <div>
                         Is there a Strava club?
                     </div>
-                    <button class="cursor-pointer" @click="faq = !faq, show = 2" x-show="!faq">
+                    <button class="cursor-pointer" @click="show = 2" :class="show === 2 ? 'rotate-180' : 'rotate-0'">
                         <img src="img/arrow-down.svg" class="w-8 h-8" alt="">
-                    </button>
-                    <button class="cursor-pointer" @click="faq = !faq, show = 1" x-show="faq">
-                        <img src="img/arrow-up.svg" class="w-8 h-8" alt="">
                     </button>
                 </div>
                 <div class="faq-body" x-show="show === 2">
@@ -467,10 +461,61 @@
                     </p>
                 </div>
             </div>
-            <div class="faq-box"></div>
-            <div class="faq-box"></div>
+            <div class="faq-box">
+                <div class="faq-title">
+                    <div>
+                        Is there an entry fee?
+                    </div>
+                    <button class="cursor-pointer" @click="show = 3" :class="show === 3 ? 'rotate-180' : 'rotate-0'">
+                        <img src="img/arrow-down.svg" class="w-8 h-8" alt="">
+                    </button>
+                </div>
+                <div class="faq-body" x-show="show === 3">
+                    <p>
+                        To sign up to the challenge, register for your FREE t-shirt and fundraising pack here.
+                    </p>
+                    <p>
+                        When you register, your fundraising page will be automatically set up for you.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-box">
+                <div class="faq-title">
+                    <div>
+                        Is there a funraising target?
+                    </div>
+                    <button class="cursor-pointer" @click="show = 4" :class="show === 4 ? 'rotate-180' : 'rotate-0'">
+                        <img src="img/arrow-down.svg" class="w-8 h-8" alt="">
+                    </button>
+                </div>
+                <div class="faq-body" x-show="show === 4" x-cloak>
+                    <p>
+                        To sign up to the challenge, register for your FREE t-shirt and fundraising pack here.
+                    </p>
+                    <p>
+                        When you register, your fundraising page will be automatically set up for you.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+</section>
+<section id="registration-cta" class="min-h-[400px] mt-8">
+    <div class="max-w-4xl mx-auto py-8 px-4 md:px-0">
+        <div class="md:flex md:flex-row items-center gap-6 px-6 py-8 bg-buttongreen rounded">
+            <div class="w-full md:w-2/3">
+                <h2 class="text-4xl font-bold text-white mb-4">Register Now!</h2>
+                <p class="text-white">Ipsum quis consequat mollit esse cupidatat tempor nisi veniam.</p>
+            </div>
+            <div class="w-full md:w-1/3 h-full mt-6 md:mt-0">
+                <a href="#"
+                   class="w-full h-full block bg-bcipink hover:bg-pink-700 border-4
+                   border-white font-bold text-white text-2xl text-center
+                   py-8 rounded-lg">Register Now</a>
+            </div>
+        </div>
+    </div>
+
 </section>
 <footer>
     <div class="lg:flex w-full lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-12 lg:pt-48 py-12 gap-4 relative">
