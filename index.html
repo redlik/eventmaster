@@ -683,17 +683,32 @@
     }
 
     // Video modal functionality
+    // Video modal functionality
     function initializeVideoModal() {
-        const modal = document.getElementById('videoModal');
-        const playButton = document.getElementById('playButton');
+        const modal = document.getElementById("videoModal");
+        const playButton = document.getElementById("playButton");
+        const iframe = document.querySelector(".modal-iframe");
 
-        playButton.addEventListener('click', () => {
-            modal.classList.add('active');
+        playButton.addEventListener("click", () => {
+            modal.classList.add("active");
+            // Ensure video autoplays when modal opens
+            iframe.src = "https://www.youtube.com/embed/69BTi8s2hCQ?autoplay=1";
         });
 
-        modal.addEventListener('click', (e) => {
+        modal.addEventListener("click", (e) => {
             if (e.target === modal) {
-                modal.classList.remove('active');
+                modal.classList.remove("active");
+                // Stop video by removing autoplay parameter
+                iframe.src = "https://www.youtube.com/embed/69BTi8s2hCQ";
+            }
+        });
+
+        // Add escape key support
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal.classList.contains("active")) {
+                modal.classList.remove("active");
+                // Stop video by removing autoplay parameter
+                iframe.src = "https://www.youtube.com/embed/69BTi8s2hCQ";
             }
         });
     }
