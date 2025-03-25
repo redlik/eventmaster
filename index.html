@@ -152,7 +152,7 @@
     <div class="w-full md:w-1/2 my-6 md:my-0">
         <h2 class="font-bold text-bcipink text-4xl md:text-6xl text-center md:text-left">Get the t-shirt</h2>
         <h5 class="my-8 text-xl text-gray-600 text-center md:text-left">50K in May. Help Cure Breast Cancer.</h5>
-        <a href="#" class="pink-button w-full md:w-auto text-center">Register Now</a>
+        <a href="#" class="pink-button sticky md:relative bottom-0 w-full block md:w-auto text-center">Register Now</a>
     </div>
     <div class="w-full md:w-1/2 relative">
         <img src="img/t-shirt.jpg" alt="" class="">
@@ -178,51 +178,43 @@
     </div>
     <div class="bg-bcipink py-12 -my-1">
         <div class="flex flex-row max-w-7xl mx-auto gap-4">
-            <div class="flex flex-col gap-8">
+            <div class="w-full flex flex-col gap-8">
                 <div class="md:flex md:flex-row gap-8 px-4 md:px-2 lg:px-0">
                     <div id="funds" class="flex flex-col gap-4 justify-center w-full md:w-3/4">
                         <div class="flex flex-row justify-between py-2">
                             <div class="">
-                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4">€122,000</h4>
+                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="currentlyRaised">€122,000</h4>
                                 <h6 class="text-white font-bold text-sm">Currently raised</h6>
                             </div>
                             <div class="">
-                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4">€155,000</h4>
+                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="goal">€155,000</h4>
                                 <h6 class="text-white font-bold text-sm">Our goal</h6>
                             </div>
                         </div>
-                        <div id="progress-bar">
-                            <svg width="100%" height="21" viewBox="0 0 791 21" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.5" d="M10.25 10.7998H780" stroke="white" stroke-width="20"
-                                      stroke-linecap="round"/>
-                                <path d="M10.25 10.7998H391" stroke="white" stroke-width="20"
-                                      stroke-linecap="round"/>
-                            </svg>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
                         </div>
                     </div>
                     <div class="w-1/2 md:w-1/4 mx-auto flex flex-col items-center justify-center bg-white/20 rounded-xl p-8 md:p-12 mt-6 md:mt-0">
-                        <h4 class="text-white font-bold text-4xl">3,100</h4>
+                        <h4 class="text-white font-bold text-4xl" id="peopleJoined">3,100</h4>
                         <h6 class="text-white font-bold">People joined</h6>
                     </div>
                 </div>
-                <div id="distance" class="flex flex-col gap-4 justify-center px-6 md:px-0">
+                <div id="distance" class="flex flex-col justify-center px-6 md:px-0">
                     <div>
-                        <h4 class="text-white font-bold text-2xl text-center">3200km Distance Travelled</h4>
+                        <h4 class="text-white font-bold text-4xl text-center">3200km Distance Travelled</h4>
                     </div>
-                    <div>
-                        <svg width="100%" height="28" viewBox="0 0 1100 28" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.4"
-                                  d="M4.0625 14.111C76.3929 21.8207 262.597 32.6143 428.772 14.111C636.49 -9.01816 1022.25 14.1109 1096.44 22.922"
-                                  stroke="white" stroke-width="7.04668" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-dasharray="28.19 21.14"/>
-                            <path d="M4.0625 14.111C76.3929 21.8207 262.598 32.6143 428.772 14.111" stroke="white"
-                                  stroke-width="7.04668" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-dasharray="28.19 21.14"/>
-                        </svg>
+                    <div class="decorative-section">
+                        <div class="">
+                            <svg class="dashed-line" viewBox="0 0 1200 200" preserveAspectRatio="none">
+                                <path class="dashed-line-static" d="M0,100 C300,150 900,50 1200,100" />
+                                <path class="dashed-line-animated" d="M0,100 C300,150 900,50 1200,100" />
+                            </svg>
+                            <div style="padding: 80px 0;"></div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -232,34 +224,13 @@
     </div>
 </section>
 <section id="donations-slider" class="py-8">
-    <div class="flex flex-row gap-8 px-4 md:px-0 overflow-x-scroll no-scrollbar">
-        <div class="donation-slide">
-            <img src="img/ribbon.svg" alt="">
-            <div class="text-gray-600 font-semibold">
-                Jane Smith just donated <span>€200.00</span>
-            </div>
-        </div>
-        <div class="donation-slide">
-            <img src="img/ribbon.svg" alt="">
-            <div class="text-gray-600 font-semibold">
-                Jane Smith just donated <span>€200.00</span>
-            </div>
-        </div>
-        <div class="donation-slide">
-            <img src="img/ribbon.svg" alt="">
-            <div class="text-gray-600 font-semibold">
-                Jane Smith just donated <span>€200.00</span>
-            </div>
-        </div>
-        <div class="donation-slide">
-            <img src="img/ribbon.svg" alt="">
-            <div class="text-gray-600 font-semibold">
-                Jane Smith just donated <span>€200.00</span>
-            </div>
+    <div class="donation-ticker">
+        <div class="scroll-container" id="donationTicker">
+            <!-- Donation items will be inserted here by JavaScript -->
         </div>
     </div>
 </section>
-<section id="why-video" class="py-12 my-8">
+<section id="why-video" class="py-12 my-8" x-data="{showVideo : false}">
     <div class="flex flex-col max-w-2xl mx-auto items-center gap-4">
         <h4 class="text-4xl text-bcipink font-bold">Why?</h4>
         <h6 class="font-bold text-gray-500 text-xl text-center">
@@ -270,13 +241,36 @@
             life-changing impacts like ground-breaking new trials, more and better drugs, terrific new treatments, less
             invasive surgeries and more lives saved.
         </p>
-        <div id="video-box" class="relative px-4 md:px-0">
-            <img src="img/video-preview.png" alt="">
-            <div id="playback-overlay" class="absolute inset-0 flex items-center justify-center">
-                <a href="#" id="playback-button"><img src="img/playback.png" alt=""></a>
+        <div class="video-container">
+            <img
+                    src="https://i.ytimg.com/vi/69BTi8s2hCQ/maxresdefault.jpg"
+                    alt="Video thumbnail"
+                    class="video-thumbnail"
+            />
+            <div class="play-button" id="playButton">
+                <div class="play-button-circle">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 3l14 9-14 9V3z"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
+    <!--- Video Modal --->
+
+    <!-- Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <iframe
+                    class="modal-iframe"
+                    src="https://www.youtube.com/embed/69BTi8s2hCQ?autoplay=1"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+
     <div class="md:flex md:flex-row max-w-6xl mx-auto gap-4 my-12">
         <div class="image-box">
             <div class="w-28 h-28 bg-bcipink rounded-full flex items-center justify-center mb-4">
@@ -447,7 +441,7 @@
         </p>
         <div class="faq-list" x-data="{ faq: false, show: 1}">
             <div class="faq-box">
-                <div class="faq-title">
+                <div class="faq-title" @click="show = 1">
                     <div>
                         How do I sign up?
                     </div>
@@ -465,7 +459,7 @@
                 </div>
             </div>
             <div class="faq-box">
-                <div class="faq-title">
+                <div class="faq-title" @click="show = 2">
                     <div>
                         Is there a Strava club?
                     </div>
@@ -483,7 +477,7 @@
                 </div>
             </div>
             <div class="faq-box">
-                <div class="faq-title">
+                <div class="faq-title" @click="show = 3">
                     <div>
                         Is there an entry fee?
                     </div>
@@ -501,7 +495,7 @@
                 </div>
             </div>
             <div class="faq-box">
-                <div class="faq-title">
+                <div class="faq-title" @click="show = 4">
                     <div>
                         Is there a funraising target?
                     </div>
@@ -537,9 +531,9 @@
         </div>
     </div>
 </section>
-<section id="sticky-button" class="sticky bottom-0 px-4 pb-2">
-    <a href="#" class="pink-button w-full block md:w-auto text-center">Register Now</a>
-</section>
+<!--<section id="sticky-button" class="sticky bottom-0 px-4 pb-2">-->
+<!--    <a href="#" class="pink-button w-full block md:w-auto text-center">Register Now</a>-->
+<!--</section>-->
 <footer>
     <div class="lg:flex w-full lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-12 lg:pt-48 py-12 gap-4 relative">
         <div id="ribbon" class="lg:top-20 lg:-left-[150px] lg:absolute h-64 lg:h-[300px] w-52">
@@ -604,5 +598,112 @@
         <img src="img/powerderby.png" alt="" class="w-64">
     </div>
 </footer>
+<script>
+    // Donation data
+    const donations = [
+        {
+            id: 1,
+            name: "Jane Smith",
+            amount: "€200.00",
+            ribbonSrc: "img/ribbon.svg",
+        },
+        {
+            id: 2,
+            name: "Jane Smith",
+            amount: "€200.00",
+            ribbonSrc: "img/ribbon.svg",
+        },
+        {
+            id: 3,
+            name: "Jane Smith",
+            amount: "€200.00",
+            ribbonSrc: "img/ribbon.svg",
+        },
+        {
+            id: 4,
+            name: "Jane Smith",
+            amount: "€200.00",
+            ribbonSrc: "img/ribbon.svg",
+        },
+        {
+            id: 5,
+            name: "Jane Smith",
+            amount: "€200.00",
+            ribbonSrc: "img/ribbon.svg",
+        },
+    ];
+
+    // Stats data
+    const stats = {
+        currentlyRaised: 143000,
+        goal: 150000,
+        peopleJoined: 3100
+    };
+
+    // Initialize donation ticker
+    function initializeDonationTicker() {
+        const ticker = document.getElementById('donationTicker');
+
+        // Create and append donation items
+        function appendDonationItems() {
+            donations.forEach(donation => {
+                const donationItem = document.createElement('div');
+                donationItem.className = 'donation-item';
+                donationItem.innerHTML = `
+              <div class="relative">
+                <img
+                  src="${donation.ribbonSrc}"
+                  alt="Donation ribbon"
+                  class="donation-ribbon"
+                />
+              </div>
+              <p class="donation-text">
+                ${donation.name} just donated ${donation.amount}
+              </p>
+            `;
+                ticker.appendChild(donationItem);
+            });
+        }
+
+        // Append items twice for seamless scrolling
+        appendDonationItems();
+        appendDonationItems();
+    }
+
+    // Initialize fundraising stats
+    function initializeFundraisingStats() {
+        // Update text content
+        document.getElementById('currentlyRaised').textContent = `€${stats.currentlyRaised.toLocaleString()}`;
+        document.getElementById('goal').textContent = `€${stats.goal.toLocaleString()}`;
+        document.getElementById('peopleJoined').textContent = stats.peopleJoined.toLocaleString();
+
+        // Update progress bar
+        const progressPercentage = (stats.currentlyRaised / stats.goal) * 100;
+        document.getElementById('progressFill').style.width = `${progressPercentage}%`;
+    }
+
+    // Video modal functionality
+    function initializeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    }
+
+    // Initialize everything when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeDonationTicker();
+        initializeFundraisingStats();
+        initializeVideoModal();
+    });
+</script>
 </body>
 </html>
