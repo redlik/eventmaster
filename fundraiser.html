@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Breast Cancer Ireland - Fundraiser</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="build/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,8 @@
           rel="stylesheet">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="mx-auto relative" x-data="{slideMenu: false }" x-on:keydown.escape="slideMenu = false">
+<body class="mx-auto relative" x-data="{slideMenu: false }" x-on:keydown.escape="slideMenu = false"
+      :class="slideMenu ? 'overflow-y-hidden' : ''">
 <div id="slide-menu" x-show="slideMenu" x-transition @click.outside="slideMenu = false"
      class="absolute top right w-full lg:w-1/3 h-full bg-white shadow-md p-12 z-50 overflow-hidden">
     <div class="flex justify-between items-center mb-12">
@@ -133,89 +134,46 @@
         </div>
     </div>
 </header>
-<section id="#t-shirt" class="max-w-7xl mx-auto md:flex md:flex-row items-center my-12 px-4 md:px-0">
-    <div class="w-full md:w-1/2 my-6 md:my-0">
-        <h2 class="font-bold text-bcipink text-4xl md:text-6xl text-center md:text-left">Get the t-shirt</h2>
-        <h5 class="my-8 text-xl text-gray-600 text-center md:text-left">50K in May. Help Cure Breast Cancer.</h5>
-        <a href="#" class="pink-button w-full md:w-auto text-center">Register Now</a>
-    </div>
-    <div class="w-full md:w-1/2 relative">
-        <img src="img/t-shirt.jpg" alt="" class="">
-        <div id="ribbon-t-shirt" class="hidden lg:block lg:top-60 lg:-left-[100px] lg:absolute h-64 lg:h-[300px] -rotate-30 w-52">
-            <div>
-                <svg width="100%" height="100%" viewBox="0 0 252 305" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M199.633 82.2703C197.254 80.0577 175.35 61.2333 146.976 54.8868C118.602 48.5404 82.864 60.5912 82.864 60.5912L85.5954 40.3031L95.1167 26.5004C95.1167 26.5004 121.688 13.4861 151.128 19.0829C180.568 24.6796 197.559 37.9238 204.522 49.7233L204.591 68.6391L199.61 82.2372L199.633 82.2703Z"
-                          fill="#DF6E81"/>
-                    <path d="M210.992 253.717L171.907 299.156C171.907 299.156 57.5644 132.95 50.5987 105.682C43.6277 78.4414 53.6199 46.3739 75.0611 35.9051C96.497 25.4641 97.2609 25.6959 97.2609 25.6959C97.2609 25.6959 81.1286 36.0196 87.713 65.2935C94.3254 94.5726 150.488 169.547 150.488 169.547L211.025 253.694L210.992 253.717Z"
-                          fill="#D51B5D"/>
-                    <path d="M10.8243 214.105L30.5082 270.717C30.5082 270.717 197.892 158.069 214.378 135.259C230.859 112.477 233.298 79.0024 217.222 61.4013C201.113 43.8228 200.312 43.7859 200.312 43.7859C200.312 43.7859 211.558 59.3146 194.663 84.1248C177.801 108.912 98.011 158.07 98.011 158.07L10.819 214.133L10.8243 214.105Z"
-                          fill="#DA4C6E"/>
-                </svg>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="numbers" class="my-8">
-    <div class="wave-border w-full">
-    <!-- Wave shape goes here-->
-    </div>
-    <div class="bg-bcipink py-12 -my-1">
-        <div class="flex flex-row max-w-7xl mx-auto gap-4">
-            <div class="flex flex-col gap-8">
-                <div class="md:flex md:flex-row gap-8 px-4 md:px-2 lg:px-0">
-                    <div id="funds" class="flex flex-col gap-4 justify-center w-full md:w-3/4">
-                        <div class="flex flex-row justify-between py-2">
-                            <div class="">
-                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4">€122,000</h4>
-                                <h6 class="text-white font-bold text-sm">Currently raised</h6>
-                            </div>
-                            <div class="">
-                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4">€155,000</h4>
-                                <h6 class="text-white font-bold text-sm">Our goal</h6>
-                            </div>
-                        </div>
-                        <div id="progress-bar">
-                            <svg width="100%" height="21" viewBox="0 0 791 21" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.5" d="M10.25 10.7998H780" stroke="white" stroke-width="20"
-                                      stroke-linecap="round"/>
-                                <path d="M10.25 10.7998H391" stroke="white" stroke-width="20"
-                                      stroke-linecap="round"/>
-                            </svg>
-                        </div>
+<main class="max-w-7xl mx-auto md:flex md:flex-row gap-6 py-8">
+    <section class="left-column w-full md:w-3/4">
+        <div class="w-full">
+            <img src="img/t-shirt.jpg" alt="" class="w-full rounded-t h-[500px] object-cover object-top">
+            <div class="bg-bcipink rounded-b-2xl p-6">
+                <div class="flex flex-row justify-between">
+                    <div class="">
+                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="raised">€122,000</h4>
+                        <h6 class="text-white font-bold text-sm">Raised</h6>
                     </div>
-                    <div class="w-1/2 md:w-1/4 mx-auto flex flex-col items-center justify-center bg-white/20 rounded-xl p-8 md:p-12 mt-6 md:mt-0">
-                        <h4 class="text-white font-bold text-4xl">3,100</h4>
-                        <h6 class="text-white font-bold">People joined</h6>
+                    <div class="">
+                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="target">€155,000</h4>
+                        <h6 class="text-white font-bold text-sm">Target</h6>
                     </div>
                 </div>
-                <div id="distance" class="flex flex-col gap-4 justify-center px-6 md:px-0">
-                    <div>
-                        <h4 class="text-white font-bold text-2xl text-center">3200km Distance Travelled</h4>
-                    </div>
-                    <div>
-                        <svg width="100%" height="28" viewBox="0 0 1100 28" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.4"
-                                  d="M4.0625 14.111C76.3929 21.8207 262.597 32.6143 428.772 14.111C636.49 -9.01816 1022.25 14.1109 1096.44 22.922"
-                                  stroke="white" stroke-width="7.04668" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-dasharray="28.19 21.14"/>
-                            <path d="M4.0625 14.111C76.3929 21.8207 262.598 32.6143 428.772 14.111" stroke="white"
-                                  stroke-width="7.04668" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-dasharray="28.19 21.14"/>
-                        </svg>
-                    </div>
+                <h4 class="hidden" id="peopleJoined">3,100</h4>
+                <div class="progress-bar mt-4">
+                    <div class="progress-fill" id="progressFill"></div>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="wave-border rotate-180 w-full">
-        <!-- Wave shape goes here-->
-    </div>
-</section>
+        <div class="my-12">
+            <h2 class="text-4xl text-bcipink font-bold mb-4">Nicole O'Callaghan</h2>
+            <p class="text-gray-500 leading-8 text-lg">
+                Thank you for visiting my fundraising page.<br/>
+                I am currently fighting Triple Negative Breast Cancer and have seen how important it is to create awareness and how early detection is key! I cannot explain how amazing all the nurses and doctors have been in the CUH. These funds will help support further research and advance the fight against breast cancer.
+                Read More
+            </p>
+        </div>
+        <div class="my-12">
+            <h2 class="text-4xl text-bcipink font-bold mb-4">Challenge progress</h2>
+        </div>
+    </section>
+    <section class="right-column w-full md:w-1/4 relative">
+        <div class="sticky top-2">
+            Sticky goes here
+        </div>
+    </section>
+</main>
+
 <footer>
     <div class="lg:flex w-full lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-12 lg:pt-48 py-12 gap-4 relative">
         <div id="ribbon" class="lg:top-20 lg:-left-[150px] lg:absolute h-64 lg:h-[300px] w-52">
@@ -280,5 +238,13 @@
         <img src="img/powerderby.png" alt="" class="w-64">
     </div>
 </footer>
+<script>
+    // Stats data
+    stats = {
+        currentlyRaised: 144000,
+        goal: 155000,
+        peopleJoined: 3100
+    };
+</script>
 </body>
 </html>
