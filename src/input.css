@@ -28,7 +28,7 @@ body {
 }
 
 .pink-button {
-    @apply bg-bcipink px-8 py-4 my-8 rounded-lg text-white text-lg cursor-pointer;
+    @apply bg-bcipink px-8 py-4 my-8 text-center rounded-lg text-white text-lg cursor-pointer inline-block;
 }
 
 .pink-button:hover {
