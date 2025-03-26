@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+        img[src=""] {
+            display: none;
+        }
+    </style>
 </head>
 <body class="mx-auto relative" x-data="{slideMenu: false }" x-on:keydown.escape="slideMenu = false"
       :class="slideMenu ? 'overflow-y-hidden' : ''">
@@ -155,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <div class="my-12">
+        <div class="my-16">
             <h2 class="text-4xl text-bcipink font-bold mb-4">Nicole O'Callaghan</h2>
             <p class="text-gray-500 leading-8 text-lg">
                 Thank you for visiting my fundraising page.<br/>
@@ -166,7 +171,7 @@
                 <span class="underline">Read More</span>
             </p>
         </div>
-        <div class="my-12">
+        <div class="my-16">
             <h2 class="text-4xl text-bcipink font-bold mb-4">Challenge progress</h2>
             <h4 class="text-2xl text-gray-500 font-bold mb-4">50 in May for Breast Cancer Ireland</h4>
             <div class="bg-bcipink rounded-2xl p-6">
@@ -196,6 +201,41 @@
 
             </div>
         </div>
+        <div class="my-16">
+            <h2 class="text-4xl text-bcipink font-bold mb-6">Campaign updates</h2>
+            <div class="campaign-update mb-6">
+                <img src="img/flowers.jpg" alt="" class="w-full object-fill h-[500px] rounded-t-2xl">
+                <div class="bg-bcipink rounded-b-2xl p-6">
+                    <div class="flex justify-between">
+                        <div class="text-white text-2xl">Date: <span class="font-bold">2025-03-19</span></div>
+                        <div class="text-white text-2xl">Completed: <span class="font-bold">7.2 KM</span></div>
+                    </div>
+                    <div class="text-white mt-6 mb-2">
+                        Nostrud ex ad cillum sunt id incididunt culpa. Incididunt cillum non sed ipsum excepteur qui.
+                        Nostrud anim occaecat ex aliqua mollit. Ea ipsum laborum anim.
+                    </div>
+                </div>
+            </div>
+            <div class="campaign-update mb-6">
+                <img src="" alt="" class="w-full object-fill h-[500px] rounded-t-2xl">
+                <div class="bg-bcipink rounded-2xl p-6">
+                    <div class="flex justify-between">
+                        <div class="text-white text-2xl">Date: <span class="font-bold">2025-03-19</span></div>
+                        <div class="text-white text-2xl">Completed: <span class="font-bold">7.2 KM</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="campaign-update">
+                <img src="" alt="" class="w-full object-fill h-[500px] rounded-t-2xl">
+                <div class="bg-bcipink rounded-2xl p-6">
+                    <div class="flex justify-between">
+                        <div class="text-white text-2xl">Date: <span class="font-bold">2025-03-19</span></div>
+                        <div class="text-white text-2xl">Completed: <span class="font-bold">7.2 KM</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
     <section class="right-column w-full md:w-1/4 relative">
         <div class="sticky top-2">
