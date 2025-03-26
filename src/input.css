@@ -35,6 +35,10 @@ body {
     @apply bg-pink-700;
 }
 
+.white-button {
+    @apply bg-white border-4 border-bcipink px-2 py-4 my-8 text-center rounded-lg text-bcipink text-lg cursor-pointer inline-block;
+}
+
 .wave-shape[data-negative=false].wave-shape-bottom {
     transform: rotate(180deg);
 }
@@ -131,6 +135,10 @@ body {
 
 .faq-body {
     @apply text-white;
+}
+
+.team-photo {
+    @apply w-full h-[150px] md:h-[200px] object-cover rounded-t-2xl;
 }
 
 .card {
