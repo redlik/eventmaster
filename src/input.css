@@ -101,7 +101,7 @@ body {
 }
 
 .donation-list {
-    @apply w-full md:w-1/2 px-4 md:px-0 mx-auto block flex flex-col gap-2;
+    @apply w-full md:w-1/2 md:block px-4 md:px-0 mx-auto block flex flex-col gap-2;
 }
 
 .donation-box {
@@ -363,7 +363,7 @@ body {
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-150%); }
 }
 
 @keyframes dash {
