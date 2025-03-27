@@ -38,9 +38,9 @@
         </ul>
     </div>
 </div>
-<header class="bg-bcipink text-white py-4 lg:py-3">
-    <div class="flex justify-between items-center px-12">
-        <div id="menu-burger">
+<header class="bg-bcipink text-white py-2 lg:py-3">
+    <div class="flex justify-between gap-4 items-center px-4 md:px-12">
+        <div id="menu-burger" class="w-1/3">
             <a href="#" @click="slideMenu = !slideMenu">
                 <svg class="w-12 lg:w-12" width="100%" viewBox="0 0 76 27" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -50,8 +50,8 @@
                 </svg>
             </a>
         </div>
-        <div>
-            <svg class="w-16 h-16 lg:w-20 lg:h-20" width="100%" height="auto" viewBox="0 0 116 90" fill="none"
+        <div class="w-1/3">
+            <svg class="w-16 h-16 lg:w-20 lg:h-20 mx-auto" width="100%" height="auto" viewBox="0 0 116 90" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_10_7806)">
                     <path d="M74.7321 5.52802C72.945 4.49115 70.9462 3.88681 68.8886 3.76238C66.6488 3.86311 64.4619 4.48523 62.4984 5.58134L62.3926 3.46614L63.0804 1.87233C64.7029 0.72881 66.6253 0.0889148 68.6064 0.0237403C70.8227 -0.159933 73.0155 0.598461 74.6498 2.10932L75.0202 4.03493L74.7263 5.52209L74.7321 5.52802Z"
@@ -134,7 +134,7 @@
                 </defs>
             </svg>
         </div>
-        <div>
+        <div class="w-1/3 text-right">
             <button class="green-button">Sign in</button>
         </div>
     </div>
