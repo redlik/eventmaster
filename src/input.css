@@ -24,7 +24,7 @@ body {
 }
 
 .signin-button {
-    @apply bg-buttongreen px-2 md:px-6 py-2 rounded-lg font-bold text-white cursor-pointer inline-block w-full text-center;
+    @apply bg-buttongreen px-2 md:px-6 py-2 rounded-lg font-bold text-white cursor-pointer inline-block w-full md:w-auto text-center uppercase;
 }
 
 .green-button:hover {
@@ -41,6 +41,12 @@ body {
 
 .white-button {
     @apply bg-white border-4 border-bcipink px-2 py-4 my-8 text-center rounded-lg text-bcipink text-lg cursor-pointer inline-block;
+}
+
+#sticky-always-mobile {
+    -webkit-box-shadow: 0px -4px 15px 0px rgba(111,111,111,0.5);
+    -moz-box-shadow: 0px -4px 15px 0px rgba(111,111,111,0.5);
+    box-shadow: 0px -4px 15px 0px rgba(111,111,111,0.5);
 }
 
 .wave-shape[data-negative=false].wave-shape-bottom {
