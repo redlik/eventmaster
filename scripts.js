@@ -75,16 +75,6 @@ function initializeFundraisingStats() {
     document.getElementById('progressFill').style.width = `${progressPercentage}%`;
 }
 
-function initializeFundraisingStatsOnFundraisingPage() {
-    // Update text content
-    document.getElementById('raised').textContent = `€${stats.currentlyRaised.toLocaleString()}`;
-    document.getElementById('target').textContent = `€${stats.goal.toLocaleString()}`;
-
-    // Update progress bar
-    const progressPercentage = (stats.currentlyRaised / stats.goal) * 100;
-    document.getElementById('progressFill').style.width = `${progressPercentage}%`;
-}
-
 // Video modal functionality
 // Video modal functionality
 function initializeVideoModal() {
@@ -121,5 +111,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeDonationTicker();
     initializeFundraisingStats();
     initializeVideoModal();
-    initializeFundraisingStatsOnFundraisingPage()
 });

@@ -146,17 +146,16 @@
             <div class="bg-bcipink rounded-b-2xl p-6">
                 <div class="flex flex-row justify-between">
                     <div class="">
-                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="raised">€122,000</h4>
+                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="person_raised">€122,000</h4>
                         <h6 class="text-white font-bold text-sm">Raised</h6>
                     </div>
                     <div class="">
-                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="target">€155,000</h4>
+                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="person_target">€155,000</h4>
                         <h6 class="text-white font-bold text-sm">Target</h6>
                     </div>
                 </div>
-                <h4 class="hidden" id="peopleJoined">3,100</h4>
                 <div class="progress-bar mt-4">
-                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-fill" id="personProgressFill"></div>
                 </div>
             </div>
         </div>
@@ -179,17 +178,16 @@
                     <div class="w-3/4">
                         <div class="flex flex-row justify-between">
                             <div class="">
-                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="raised">€122,000</h4>
+                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="challenge_raised">€122,000</h4>
                                 <h6 class="text-white font-bold text-sm">Raised</h6>
                             </div>
                             <div class="">
-                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="target">€155,000</h4>
+                                <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="challenge_target">€155,000</h4>
                                 <h6 class="text-white font-bold text-sm">Target</h6>
                             </div>
                         </div>
-                        <h4 class="hidden" id="peopleJoined">3,100</h4>
                         <div class="progress-bar mt-4">
-                            <div class="progress-fill" id="progressFill"></div>
+                            <div class="progress-fill" id="challengeProgressFill"></div>
                         </div>
                     </div>
                     <div class="w-1/4">
@@ -240,7 +238,7 @@
             <div class="border-bcipink border-3 bg-white p-6 mb-6 rounded-2xl">
                 <div class="flex items-center justify-between gap-6">
                     <div>
-                        <img src="/img/ribbon.svg" alt="">
+                        <img src="img/ribbon.svg" alt="">
                     </div>
                     <div class="grow">
                         <div class="text-gray-500 text-2xl font-bold mb-2">Tina Holland</div>
@@ -262,7 +260,7 @@
             <div class="border-bcipink border-3 bg-white p-6 mb-6 rounded-2xl">
                 <div class="flex items-center justify-between gap-6">
                     <div>
-                        <img src="/img/ribbon.svg" alt="">
+                        <img src="img/ribbon.svg" alt="">
                     </div>
                     <div class="grow">
                         <div class="text-gray-500 text-2xl font-bold mb-2">Tina Holland</div>
@@ -278,7 +276,7 @@
             <div class="border-bcipink border-3 bg-white p-6 mb-6 rounded-2xl">
                 <div class="flex items-center justify-between gap-6">
                     <div>
-                        <img src="/img/ribbon.svg" alt="">
+                        <img src="img/ribbon.svg" alt="">
                     </div>
                     <div class="grow">
                         <div class="text-gray-500 text-2xl font-bold mb-2">Tina Holland</div>
@@ -437,11 +435,44 @@
 </footer>
 <script>
     // Stats data
-    stats = {
-        currentlyRaised: 144000,
+    person_stats = {
+        currentlyRaised: 134000,
         goal: 155000,
-        peopleJoined: 3100
     };
+
+    challenge_stats = {
+        currentlyRaised: 90000,
+        goal: 155000,
+    };
+
+    function initializeFundraisingStatsOnFundraiserPage() {
+        // Update text content
+        document.getElementById('person_raised').textContent = `€${person_stats.currentlyRaised.toLocaleString()}`;
+        document.getElementById('person_target').textContent = `€${person_stats.goal.toLocaleString()}`;
+        // Update progress bar
+        var personProgressPercentage = (person_stats.currentlyRaised / person_stats.goal) * 100;
+        if (personProgressPercentage > 100) {
+            personProgressPercentage = 100;
+        }
+        document.getElementById('personProgressFill').style.width = `${personProgressPercentage}%`;
+    }
+
+    function initializeFundraisingStatsOnChallenge() {
+        // Update text content
+        document.getElementById('challenge_raised').textContent = `€${challenge_stats.currentlyRaised.toLocaleString()}`;
+        document.getElementById('challenge_target').textContent = `€${challenge_stats.goal.toLocaleString()}`;
+        // Update progress bar
+        var challengeProgressPercentage = (challenge_stats.currentlyRaised / challenge_stats.goal) * 100;
+        if (challengeProgressPercentage > 100) {
+            challengeProgressPercentage = 100;
+        }
+        document.getElementById('challengeProgressFill').style.width = `${challengeProgressPercentage}%`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeFundraisingStatsOnFundraiserPage();
+        initializeFundraisingStatsOnChallenge();
+    });
 </script>
 </body>
 </html>
