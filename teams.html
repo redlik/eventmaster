@@ -148,17 +148,16 @@
             <div class="bg-bcipink rounded-b-2xl p-6">
                 <div class="flex flex-row justify-between">
                     <div class="">
-                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="raised">€122,000</h4>
+                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="team_raised">€122,000</h4>
                         <h6 class="text-white font-bold text-sm">Raised</h6>
                     </div>
                     <div class="">
-                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="target">€155,000</h4>
+                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="team_target">€155,000</h4>
                         <h6 class="text-white font-bold text-sm">Target</h6>
                     </div>
                 </div>
-                <h4 class="hidden" id="peopleJoined">3,100</h4>
                 <div class="progress-bar mt-4">
-                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-fill" id="teamProgressFill"></div>
                 </div>
             </div>
         </div>
@@ -429,11 +428,27 @@
 </footer>
 <script>
     // Stats data
-    stats = {
-        currentlyRaised: 144000,
-        goal: 155000,
-        peopleJoined: 3100
+    team_stats = {
+        currentlyRaised: 1947,
+        goal: 500,
     };
+
+    function initializeFundraisingStatsOnTeamsPage() {
+        // Update text content
+        document.getElementById('team_raised').textContent = `€${team_stats.currentlyRaised.toLocaleString()}`;
+        document.getElementById('team_target').textContent = `€${team_stats.goal.toLocaleString()}`;
+
+        // Update progress bar
+        var teamProgressPercentage = (team_stats.currentlyRaised / team_stats.goal) * 100;
+        if (teamProgressPercentage > 100) {
+            teamProgressPercentage = 100;
+        }
+        document.getElementById('teamProgressFill').style.width = `${teamProgressPercentage}%`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeFundraisingStatsOnTeamsPage()
+    });
 </script>
 </body>
 </html>
