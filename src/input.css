@@ -47,6 +47,7 @@ body {
     -webkit-box-shadow: 0px -4px 15px 0px rgba(111,111,111,0.5);
     -moz-box-shadow: 0px -4px 15px 0px rgba(111,111,111,0.5);
     box-shadow: 0px -4px 15px 0px rgba(111,111,111,0.5);
+    @apply bg-bcipink
 }
 
 .wave-shape[data-negative=false].wave-shape-bottom {
