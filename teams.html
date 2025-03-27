@@ -135,28 +135,28 @@
             </svg>
         </div>
         <div class="w-1/3 text-right">
-            <button class="green-button">Sign in</button>
+            <button class="signin-button">Sign in</button>
         </div>
     </div>
 </header>
 <main class="max-w-7xl mx-auto md:flex md:flex-row gap-6 py-8">
     <section class="left-column w-full md:w-3/4 px-4 md:px-0">
         <div class="w-full">
-            <div class="rounded-t-2xl border-5 border-bcipink h-[450px] flex items-center justify-center">
+            <div class="rounded-t-2xl border-5 border-bcipink h-[200px] md:h-[450px] flex items-center justify-center">
                 <img src="img/coffey.png" alt="" width="80%">
             </div>
             <div class="bg-bcipink rounded-b-2xl p-6">
                 <div class="flex flex-row justify-between">
                     <div class="">
-                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="team_raised">€122,000</h4>
+                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-1 md:mb-4" id="team_raised">€122,000</h4>
                         <h6 class="text-white font-bold text-sm">Raised</h6>
                     </div>
                     <div class="">
-                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-4" id="team_target">€155,000</h4>
-                        <h6 class="text-white font-bold text-sm">Target</h6>
+                        <h4 class="text-white font-bold text-2xl md:text-4xl mb-1 md:mb-4" id="team_target">€155,000</h4>
+                        <h6 class="text-white font-bold text-sm text-right md:text-left">Target</h6>
                     </div>
                 </div>
-                <div class="progress-bar mt-4">
+                <div class="progress-bar mt-6">
                     <div class="progress-fill" id="teamProgressFill"></div>
                 </div>
             </div>
@@ -260,11 +260,11 @@
         <div class="my-16">
             <h2 class="text-4xl text-bcipink font-bold mb-6">Our Amazing Supporters</h2>
             <div class="border-bcipink border-3 bg-white p-6 mb-6 rounded-2xl">
-                <div class="flex items-center justify-between gap-6">
-                    <div>
-                        <img src="/img/ribbon.svg" alt="">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="order-2 md:order-1 hidden md:block">
+                        <img src="img/ribbon.svg" alt="">
                     </div>
-                    <div class="grow">
+                    <div class="md:grow order-2">
                         <div class="text-gray-500 text-2xl font-bold mb-2">Tina Holland</div>
                         <p class="text-gray-500">Well done Nicole wishing you all the best with your recovery X Tina
                             ❤️❤️❤️️️</p>
@@ -275,40 +275,40 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div class="text-5xl font-bold text-bcipink mb-6">€140</div>
+                    <div class="flex flex-row justify-between md:flex-col items-center order-1 md:order-3 w-full md:w-auto shrink-0 md:shrink">
+                        <div class="text-5xl font-bold text-bcipink mb-0 md:mb-6">€140</div>
                         <div class="text-gray-500">1 day ago</div>
                     </div>
                 </div>
             </div>
             <div class="border-bcipink border-3 bg-white p-6 mb-6 rounded-2xl">
-                <div class="flex items-center justify-between gap-6">
-                    <div>
-                        <img src="/img/ribbon.svg" alt="">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="order-2 md:order-1 hidden md:block">
+                        <img src="img/ribbon.svg" alt="">
                     </div>
-                    <div class="grow">
+                    <div class="md:grow order-2">
                         <div class="text-gray-500 text-2xl font-bold mb-2">Tina Holland</div>
                         <p class="text-gray-500">Well done Nicole wishing you all the best with your recovery X Tina
                             ❤️❤️❤️️️</p>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div class="text-5xl font-bold text-bcipink mb-6">€140</div>
+                    <div class="flex flex-row justify-between md:flex-col items-center order-1 md:order-3 w-full md:w-auto shrink-0 md:shrink">
+                        <div class="text-5xl font-bold text-bcipink mb-0 md:mb-6">€140</div>
                         <div class="text-gray-500">1 day ago</div>
                     </div>
                 </div>
             </div>
             <div class="border-bcipink border-3 bg-white p-6 mb-6 rounded-2xl">
-                <div class="flex items-center justify-between gap-6">
-                    <div>
-                        <img src="/img/ribbon.svg" alt="">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="order-2 md:order-1 hidden md:block">
+                        <img src="img/ribbon.svg" alt="">
                     </div>
-                    <div class="grow">
+                    <div class="md:grow order-2">
                         <div class="text-gray-500 text-2xl font-bold mb-2">Tina Holland</div>
                         <p class="text-gray-500">Well done Nicole wishing you all the best with your recovery X Tina
                             ❤️❤️❤️️️</p>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div class="text-5xl font-bold text-bcipink mb-6">€140</div>
+                    <div class="flex flex-row justify-between md:flex-col items-center order-1 md:order-3 w-full md:w-auto shrink-0 md:shrink">
+                        <div class="text-5xl font-bold text-bcipink mb-0 md:mb-6">€140</div>
                         <div class="text-gray-500">1 day ago</div>
                     </div>
                 </div>
@@ -350,7 +350,7 @@
         </div>
 
     </section>
-    <section class="right-column w-full md:w-1/4 relative px-4 md:px-0 mt-8 md:mt-0">
+    <section class="right-column w-full md:w-1/4 hidden md:block relative px-4 md:px-0 mt-8 md:mt-0">
         <div class="sticky top-2">
             <div class="border-3 border-bcipink rounded-2xl px-2 pt-2 md:pt-6 pb-2">
                 <img src="img/50k-logo.svg" alt="" class="hidden md:block mb-6 w-full">
@@ -358,6 +358,12 @@
                 <a href="#" class="pink-button w-full block text-center !text-2xl uppercase !py-4 font-bold !mt-2 !mb-0">Share</a>
                 <a href="#" class="white-button w-full block text-center !text-2xl uppercase !py-4 font-bold !mt-2 !mb-0">Join the Team +</a>
             </div>
+        </div>
+    </section>
+    <section id="sticky-always-mobile" class="bg-gray-50 px-3 py-4 fixed w-full bottom-0 left-0 z-50 md:hidden">
+        <div class="flex gap-2">
+            <a href="#" class="font-bold w-1/2 rounded-lg bg-white hover:bg-pink-50 text-2xl text-center py-4 text-bcipink cursor-pointer uppercase">Share</a>
+            <a href="#" class="font-bold w-1/2 rounded-lg bg-buttongreen hover:bg-green-700 text-2xl text-center py-4 text-white cursor-pointer uppercase">Donate</a>
         </div>
     </section>
 </main>
@@ -394,7 +400,7 @@
                 Breast Cancer Ireland<br>
                 RCN: 20078577
             </p>
-            <img src="img/charities.png" alt="Charities Ireland logo"
+            <img src="img/footer-logo.png" alt="Charities Ireland logo"
                  class="w-[170px]">
         </div>
         <div class="w-full lg:w-2/5">
