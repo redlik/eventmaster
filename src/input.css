@@ -3,6 +3,7 @@
 @theme {
     --color-bcipink: #D51B5D;
     --color-buttongreen: #21A71D;
+    --breakpoint-xs: 30rem;
 }
 
 body {
@@ -121,6 +122,10 @@ body {
 
 .donation-slide {
     @apply flex flex-row justify-center items-center w-full md:w-1/3 h-32;
+}
+
+.team-photo {
+    min-height: 200px;
 }
 
 .no-scrollbar::-webkit-scrollbar {
