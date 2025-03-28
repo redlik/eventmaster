@@ -209,7 +209,9 @@
                     </div>
                 </div>
                 <div class="bg-bcipink rounded-2xl">
-                    <img src="img/t-shirt.jpg" alt="" class="team-photo">
+                    <div class="flex items-center justify-center team-photo-frame">
+                        <img src="" alt="" class="team-photo">
+                    </div>
                     <div class="p-4 text-white">
                         <h4 class="text-sm">Team Coffee</h4>
                         <h3 class="font-bold text-lg mb-4">Nicole O'Callaghan</h3>
@@ -439,6 +441,19 @@
         currentlyRaised: 1947,
         goal: 500,
     };
+    function replacePhotoWithPlaceholder() {
+        team_photo = document.getElementsByClassName("team-photo");
+        for (var i = 0; i < team_photo.length; i++) {
+            if(team_photo[i].getAttribute('src') == "") {
+                team_photo[i].setAttribute('src', 'img/50k_may_white.svg');
+                team_photo[i].setAttribute('width', '60%');
+                team_photo[i].setAttribute('height', '60%');
+                team_photo[i].classList.add('w-2/3');
+                team_photo[i].classList.remove('team-photo');
+            }
+        }
+
+    }
 
     function initializeFundraisingStatsOnTeamsPage() {
         // Update text content
@@ -454,7 +469,8 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        initializeFundraisingStatsOnTeamsPage()
+        initializeFundraisingStatsOnTeamsPage();
+        replacePhotoWithPlaceholder();
     });
 </script>
 </body>
