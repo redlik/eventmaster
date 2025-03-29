@@ -147,15 +147,15 @@ body {
 }
 
 .faq-box {
-    @apply flex flex-col gap-2 bg-bcipink p-6 rounded-lg text-white;
+    @apply flex flex-col gap-2 bg-bcipink p-4 md:p-6 rounded-lg text-white;
 }
 
 .faq-title {
-    @apply flex flex-row justify-between items-center text-white text-xl font-semibold cursor-pointer;
+    @apply flex flex-row justify-between items-center text-white text-lg md:text-xl font-semibold cursor-pointer;
 }
 
 .faq-body {
-    @apply text-white;
+    @apply text-white text-sm md:text-base;
 }
 
 .team-photo {
