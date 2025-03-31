@@ -117,7 +117,7 @@ body {
 }
 
 .donation-box {
-    @apply flex flex-row w-full justify-between items-center gap-2 bg-white my-2 px-2 md:px-6 py-4;
+    @apply flex flex-col md:flex-row w-full justify-between items-center gap-2 bg-white my-2 px-2 md:px-6 py-4;
 }
 
 .donation-slide {
